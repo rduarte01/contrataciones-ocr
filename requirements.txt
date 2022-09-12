@@ -1,0 +1,7 @@
+paddleocr
+paddlepaddle
+pdf2image
+ocrmypdf
+pytesseract
+requests
+tesseract

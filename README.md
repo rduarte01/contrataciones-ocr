@@ -1,1 +1,0 @@
-# contrataciones-ocr
