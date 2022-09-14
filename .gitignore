@@ -4,4 +4,4 @@
 
 /**/env
 /**/myenv
-/**/files/*
+/**/files/**/*.*

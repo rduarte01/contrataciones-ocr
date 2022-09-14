@@ -7,18 +7,19 @@ from pdf2image import convert_from_path
 from PIL import Image
 
 from utils import FILES_DIR
+from utils.utils import OCRMYPDF_FILES_DIR
 
 
 class Pdf2image_services:
 
     def pdf_to_text(self, filename):
         # Path of the Input pdf
-        PDF_file = Path(f"{FILES_DIR}/{filename}_ocrmypdf.pdf")
+        PDF_file = Path(f"{OCRMYPDF_FILES_DIR}/{filename}_ocrmypdf.pdf")
 
         # Store all the pages of the PDF in a variable
         image_file_list = []
 
-        text_file = Path(f"{FILES_DIR}/{filename}_pdf2image.txt")
+        text_file = Path(f"{OCRMYPDF_FILES_DIR}/{filename}_pdf2image.txt")
 
         ''' Main execution point of the program'''
         with TemporaryDirectory() as tempdir:

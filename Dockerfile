@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+COPY libgomp.so.1 /usr/lib
+
 # Install python3
 RUN apt-get update \
   && apt-get install -y python3-pip python3-dev \
