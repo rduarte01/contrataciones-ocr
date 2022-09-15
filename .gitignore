@@ -5,3 +5,4 @@
 /**/env
 /**/myenv
 /**/files/**/*.*
+!/**/files/**/__init__.py

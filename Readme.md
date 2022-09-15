@@ -8,7 +8,7 @@ Comandos para correr el proyecto
 * En la raiz del proyecto ejecutar los siguientes comandos:
 
 ```bash
-  docker build -e lang=c.utf-8 -t ocr-contrataciones .
+  docker build -t ocr-contrataciones .
 ```
 
 ```bash

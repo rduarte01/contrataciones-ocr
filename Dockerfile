@@ -1,6 +1,8 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
-COPY libgomp.so.1 /usr/lib
+#COPY libgomp.so.1 /usr/lib
+ENV PY=America/Asuncion \
+    DEBIAN_FRONTEND=noninteractive
 
 # Install python3
 RUN apt-get update \
@@ -13,6 +15,8 @@ RUN apt-get update \
   && pip3 install pdf2image \
   && pip3 install python-dateutil 
   
+RUN apt-get install -y libglib2.0-0 libsm6 libxrender1 libxext6
+RUN apt-get install -y libgl1
 
 WORKDIR /app
 
@@ -22,6 +26,10 @@ WORKDIR /app
 
 #RUN apk add ocrmypdf
 #RUN apk add --no-cache tesseract-ocr
+
+
+#RUN apt install -y libgl1-mesa-glx
+
 
 COPY requirements.txt /app
 #RUN /opt/venv/bin/python3 -m pip install --upgrade pip
